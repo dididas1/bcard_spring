@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.infosiatec.mapper.ImageDao">
+	<select id="getImageDatas" resultType="com.infosiatec.domein.ImageModifyVo">
+		select * from cardinfo WHERE nno = #{nNo}
+	</select>
+	<insert id="ImgDataInsert" parameterType="com.infosiatec.domein.ImageModifyVo">
+		INSERT INTO cardinfo( 
+			ino, nno, name, namex, namey, namecolor, namew, namefont, nameta, name2, name2x, name2y, name2color, name2font, name2w, name2ta,cname, cnamex, cnamey, cnamecolor, cnamefont, cnamew, cnameta, dept, deptx, depty, deptcolor, deptfont, deptw, deptta, ranktext, rankx, ranky, rankcolor, rankfont, rankw, rankta,zcode, zcodex, zcodey, zcodecolor, zcodefont, zcodew, zcodeta, adr, adrx, adry, adrcolor, adrfont, adrw, adrta, tel, telx, tely, telcolor, telfont, telw, telta, fax, faxx, faxy, faxcolor	, faxfont, faxw, faxta, email, emailx, emaily, emailcolor, emailfont, emailw, emailta, page, pagex, pagey, pagecolor, pagefont, pagew, pageta, imgpath, imgx, imgy, imgscalex, imgscaley,nameht,name2ht,cnameht,deptht,rankht,zcodeht,adrht,telht,faxht,emailht,pageht) 
+		VALUES ( 
+			#{iNo}, #{nNo}, #{name}, #{nameX}, #{nameY}, #{nameColor}, #{nameW}, #{nameFont}, #{nameTa}, #{name2}, #{name2X}, #{name2Y}, #{name2Color}, #{name2Font}, #{name2W}, #{name2Ta}, #{cname}, #{cnameX}, #{cnameY}, #{cnameColor}, #{cnameFont}, #{cnameW}, #{cnameTa},#{dept}, #{deptX}, #{deptY}, #{deptColor}, #{deptFont}, #{deptW}, #{deptTa},#{rankText}, #{rankX}, #{rankY}, #{rankColor}, #{rankFont}, #{rankW}, #{rankTa},  #{zcode}, #{zcodeX}, #{zcodeY}, #{zcodeColor}, #{zcodeFont}, #{zcodeW}, #{zcodeTa}, #{adr}, #{adrX}, #{adrY}, #{adrColor},#{adrFont}, #{adrW}, #{adrTa}, #{tel}, #{telX}, #{telY}, #{telColor}, #{telFont}, #{telW}, #{telTa}, #{fax}, #{faxX}, #{faxY}, #{faxColor}, #{faxFont}, #{faxW}, #{faxTa}, #{email}, #{emailX},	#{emailY}, #{emailColor}, #{emailFont}, #{emailW}, #{emailTa}, #{page}, #{pageX}, #{pageY}, #{pageColor}, #{pageFont}, #{pageW}, #{pageTa}, #{imgPath}, #{imgX}, #{imgY}, #{imgScaleX}, #{imgScaleY},#{nameHt},#{name2Ht},#{cnameHt},#{deptHt},#{rankHt},#{zcodeHt},#{adrHt},#{telHt},#{faxHt},#{emailHt},#{pageHt})
+	</insert>
+</mapper>
