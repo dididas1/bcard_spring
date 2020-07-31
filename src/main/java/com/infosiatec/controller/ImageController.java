@@ -49,7 +49,7 @@ public class ImageController {
 	@RequestMapping(value = "/imgData", method = RequestMethod.GET)
 	public Map<String, Object> opentemplet(String nNo) throws Exception {
 		Map<String, Object> map = new HashMap<>();
-
+		
 		ImageModifyVo imgVo = imageService.getNameCardData(Integer.valueOf(nNo));
 
 		map.put("result", imgVo);

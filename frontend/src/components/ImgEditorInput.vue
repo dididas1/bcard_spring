@@ -793,40 +793,7 @@ export default {
         t1.fontSize *= t1.fixedWidth / (t1.width)
         t1.width = t1.fixedWidth
       } */
-      var index = 0
-      var text1 = ''
-      var text2 = ''
-      if (t1.name === 'cname') {
-        vm.$data.cname = t1.text
-      } else if (t1.name === 'namek1') {
-        vm.$data.namek1 = t1.text
-      } else if (t1.name === 'namek2') {
-        vm.$data.namek2 = t1.text
-      } else if (t1.name === 'namey1') {
-        vm.$data.namey1 = t1.text
-      } else if (t1.name === 'namey2') {
-        vm.$data.namey2 = t1.text
-      } else if (t1.name === 'dept') {
-        vm.$data.dept = t1.text
-      } else if (t1.name === 'rank') {
-        vm.$data.rank = t1.text
-      } else if (t1.name === 'zcode') {
-        vm.$data.zcode = t1.text
-      } else if (t1.name === 'adr') {
-        index = t1.text.indexOf(' ')
-        text1 = t1.text.substring(0, index)
-        text2 = t1.text.substring(index + 1, t1.text.length)
-        vm.$data.adr1 = text1
-        vm.$data.adr2 = text2
-      } else if (t1.name === 'tel') {
-        vm.$data.tel = t1.text
-      } else if (t1.name === 'fax') {
-        vm.$data.fax = t1.text
-      } else if (t1.name === 'email') {
-        vm.$data.email = t1.text
-      } else if (t1.name === 'page') {
-        vm.$data.page = t1.text
-      }
+      vm.$data[t1.name] = t1.text
     })
     // objectクリック時情報渡す。
     this.canvas.on('mouse:up', function (opt) {
