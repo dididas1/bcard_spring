@@ -103,10 +103,10 @@
     </b-col>
   </b-row>
     <b-input-group>
-      <b-button variant="outline-primary" v-on:click='addGrid'>Add</b-button>
-      <b-button variant="outline-primary" v-on:click='removeGrid'>Remove</b-button>
-      <b-button variant="outline-primary" v-on:click='saveImg'>저장</b-button>
-      <b-button variant="outline-primary" v-on:click='setData'>표시</b-button>
+      <b-button variant="outline-primary" v-on:click='addGrid'>girdAdd</b-button>
+      <b-button variant="outline-primary" v-on:click='removeGrid'>girdRemove</b-button>
+      <b-button variant="outline-primary" v-on:click='saveImg'>保存</b-button>
+      <b-button variant="outline-primary" v-on:click='setData'>データセット</b-button>
     </b-input-group>
   </b-container>
 </template>
@@ -564,7 +564,7 @@ export default {
             fixedWidth: this.datas.cnameW,
             baseFontSize: parseInt(this.datas.cnameFont),
             name: 'cname',
-            fill: this.datas.cnameColor,
+            fill: '#000000',
             height: this.datas.cnameHt
           }
 
@@ -857,7 +857,7 @@ export default {
       }
     })
     eventBus.$on('object', (object) => {
-      vm.$data.canvas.requestRenderAll()
+      vm.$data.canvas.renderAll()
       eventBus.$emit('canvas', vm.$data.canvas)
     })
   },
