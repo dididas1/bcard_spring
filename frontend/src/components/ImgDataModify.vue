@@ -300,7 +300,6 @@ export default {
       this.objectFont = object.fontFamily
       this.objectColor = object.fill
       this.objectColorOld = object.fill
-      console.log(object)
     })
     eventBus.$on('canvas', (canvas) => {
       this.canvas = canvas

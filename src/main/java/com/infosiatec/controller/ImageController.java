@@ -60,7 +60,7 @@ public class ImageController {
 	@RequestMapping(value="/imgDataInsert", method=RequestMethod.POST)
 	public ResponseEntity<String> imgDataInsert(@RequestBody ImageModifyVo vo) throws Exception{
 		ResponseEntity<String> entity=null;
-		System.out.println(vo.toString());
+		
 		try {
 			
 			 imageService.createNameCardData(vo);

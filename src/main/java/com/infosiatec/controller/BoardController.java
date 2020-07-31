@@ -31,7 +31,7 @@ public class BoardController {
 		Map<String, Object> map = new HashMap<>();
 
 		List<BoardVO> board = boardService.printBoard();
-
+		
 		map.put("result", board);
 		
 		return map; 
@@ -40,12 +40,13 @@ public class BoardController {
 	@RequestMapping(value="/baordCreate", method=RequestMethod.POST)
 	public ResponseEntity<String> BoardCreatePost(@RequestBody BoardVO vo) throws Exception{
 		ResponseEntity<String> entity=null;
-
+		
 		try {
 			boardService.boardCreate(vo);
 			
 			entity=new ResponseEntity<String>("SUCCESS", HttpStatus.OK);
 		} catch (Exception e) {
+			e.printStackTrace();
 			entity=new ResponseEntity<String>("SUCCESS", HttpStatus.BAD_REQUEST);
 		}
 

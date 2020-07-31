@@ -2,7 +2,7 @@
     <div id="Listvue">
         <div class="container">
             <div class="form-group">
-              <input type="text" v-model="id"/>
+              <input type="text" v-model="bno"/>
               <input type="text" v-model="bTitle" placeholder="이름을 입력합니다"/>
               <button v-on:click="addContact">수정</button>
             </div>
@@ -28,7 +28,7 @@ export default {
     },
     addContact: function () {
       this.$http.post('/baordCreate',
-        { id: this.id, bTitle: this.bTitle }
+        { bno: this.id, bTitle: this.bTitle }
       ).then(response => {
         console.warn(response)
         this.result = response.data

@@ -727,17 +727,6 @@ export default {
           event.width = largest
         }
       }
-      /* if (event.width >= largest) {
-        if (Math.round(event.fontSize) < event.baseFontSize) {
-          event.fontSize *= event.width / (largest + 1)
-        } else {
-          event.fontSize = event.baseFontSize
-        }
-      }
-      if (event.width > event.fixedWidth) {
-        event.fontSize *= event.fixedWidth / (event.width + 1)
-        event.width = event.fixedWidth
-      } */
     },
     setCanvas: function () {
       var canvas = new fabric.Canvas('canvas')
